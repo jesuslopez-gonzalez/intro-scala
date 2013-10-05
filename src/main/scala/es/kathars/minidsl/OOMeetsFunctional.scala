@@ -1,6 +1,6 @@
 package es.kathars.minidsl
 
-object OOMeetsFunctional {
+object OOMeetsFunctional extends App {
 
   def Scala = ()
 
@@ -14,4 +14,7 @@ object OOMeetsFunctional {
   object Object {
     def -(o: Oriented.type) = Oriented
   }
+
+  Scala
+  Object-Oriented Meets Functional
 }
