@@ -3,8 +3,8 @@ package es.kathars.oo
 class Person(var name: String, var age: Int)
 
 object Person {
-  def apply(name: String, age: Int) =
-    new Person(name, age)
+  def apply(name: String, age: Int) = new Person(name, age)
+  def unapply(person: Person) = Some((person.name, person.age))
 }
 
 class Programmer(
@@ -24,4 +24,8 @@ object PersonApp extends App {
 
   // And now using companion factory, the 'apply' method is applied automatically!
   val p2 = Person("Jordi Hurtado", Int.MaxValue)
+
+  // Object deconstruction
+  val Person(name, age) = p1
+  println(s"####> Name: $name, Age: $age")
 }
