@@ -12,7 +12,7 @@ object Polymorphism {
 
   class Group[+A](val l: List[A])
 
-  val g1: Group[Programmer] = new Group(List(
+  val g1 = new Group(List(
     Programmer("Richard Stallman", 60)))
 
   val g2: Group[Person] = g1
