@@ -6,7 +6,7 @@ object PatternMatchingApp extends App {
 
   case class Programmer(name: Name, age: Int, skills: List[String] = List())
 
-  def isCandidate(p: Programmer) = p match {
+  def isScalaCandidate(p: Programmer) = p match {
     case Programmer(_, _, skills) if skills contains "Scala" => true
     case Programmer(Name("Richard", "Stallman"), _, _) => true
     case _ => false
